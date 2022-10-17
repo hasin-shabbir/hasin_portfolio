@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fb, insta, msg, twitter } from "../svgImage";
+import { github, insta, msg, linkedin } from "../svgImage";
 import { parallax } from "../utilits";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     parallax();
     const interval = setInterval(() => {
-      setText(text < 3 ? text + 1 : 1);
+      setText(text < 6 ? text + 1 : 1);
     }, 5000);
     return () => clearInterval(interval);
   });
@@ -18,21 +18,30 @@ const Home = () => {
           <div className="hero_inner">
             <div className="content">
               <span className="hello">Hello, {`I'm`}</span>
-              <h3 className="name">Aali</h3>
+              <h3 className="name">Hasin</h3>
               <div className="job">
                 <span className="cd-headline rotate-1">
                   {" "}
                   {/* ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  */}
-                  <span className="blc">Creative </span>
+                  {/* <span className="blc">Creative </span> */}
                   <span className="cd-words-wrapper">
                     <b className={text === 1 ? "is-visible" : "is-hidden"}>
-                      Designer
-                    </b>
-                    <b className={text === 2 ? "is-visible" : "is-hidden"}>
                       Developer
                     </b>
+                    <b className={text === 2 ? "is-visible" : "is-hidden"}>
+                      Data Magician
+                    </b>
                     <b className={text === 3 ? "is-visible" : "is-hidden"}>
-                      Freelancer
+                      Code Tinkerer
+                    </b>
+                    <b className={text === 4 ? "is-visible" : "is-hidden"}>
+                      Traveler
+                    </b>
+                    <b className={text === 5 ? "is-visible" : "is-hidden"}>
+                      Astrophile
+                    </b>
+                    <b className={text === 6 ? "is-visible" : "is-hidden"}>
+                      Melomaniac
                     </b>
                   </span>
                 </span>
@@ -115,7 +124,7 @@ const Home = () => {
                 <span className="in layer" data-depth="0.3" />
               </span>
               <h3 className="stroke_text">
-                <span>Aali</span>
+                <span>Hasin</span>
               </h3>
             </div>
           </div>
@@ -123,19 +132,19 @@ const Home = () => {
         <div className="socials">
           <ul>
             <li>
-              <a href="#">{fb}</a>
+              <a href="https://github.com/hasin-shabbir" target="_blank">{github}</a>
             </li>
             <li>
-              <a href="#">{twitter}</a>
+              <a href="https://www.linkedin.com/in/muhammad-hasin-shabbir/" target="_blank">{linkedin}</a>
             </li>
             <li>
-              <a href="#">{insta}</a>
+              <a href="https://www.instagram.com/hasins.lens/" target="_blank">{insta}</a>
             </li>
           </ul>
         </div>
         <div className="hero_mail">
-          <a className="line_anim" href="#">
-            hello@aali.com
+          <a className="line_anim" href="mailto:hasin.shabbir@nyu.edu">
+            hasin.shabbir@nyu.edu
           </a>
         </div>
       </div>
